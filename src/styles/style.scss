@@ -1,3 +1,7 @@
+/* Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 /* Variables */
 
 $primary-font-color: hsl(215, 51%, 70%); // Font Color
@@ -6,12 +10,99 @@ $highlight-font-color: hsl(178, 100%, 50%);
 $main-bg: hsl(217, 54%, 11%); // Background Color
 $card-bg: hsl(216, 50%, 16%);
 
-$divider-color: hsl(215, 32%, 27%); // Divider Color
+$divider-color: hsla(215, 32%, 27%, 100%); // Divider Color
 
-$white: (0, 0%, 100%); // Neutral
+$white: hsl(0, 0%, 100%); // Neutral
 
 /* Font Sizes Variables */
 
 $p-size: 18px;
-$title-size: 24px;
+$title-size: 22px;
 
+/* Font Type Variable */
+
+$outfit: 'Outfit', sans-serif;
+
+* { // Reset
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: $outfit; // Standard Font-familys
+    color: $primary-font-color;
+    font-weight: 200;
+}
+
+body {
+    background-color: $main-bg;
+    .container {
+        max-height: 100vh;
+        margin: 4rem 2rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $card-bg;
+        border-radius: 1rem;
+        .image {
+            max-width: 100%;
+            border-radius: .7rem;
+        }
+        .image-title {
+            margin: 1.5rem 0 1rem 0;
+            min-width: 100%;
+            font-size: $title-size;
+            font-weight: 500;
+            color: $white;
+        }
+        .image-desc {
+            margin-bottom: 1rem;
+            line-height: 1.5rem;
+        }
+        .container__auction {
+            min-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .auction__price {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                .price-value {
+                    color: $highlight-font-color;
+                    font-weight: 600;
+                }
+            }
+            .auction__time {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                .time-value {
+                    font-weight: 400;
+                }
+            }
+        }
+        .divider {
+            min-width: 100%;
+            border-top: 1px solid $divider-color;
+            margin: 1rem;
+        }
+        .container__creator {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .creator-img {
+                max-width: 12%;
+                border: 1px solid $white;
+                border-radius: 50%;
+            }
+            .creator-name {
+                font-weight: 300;
+                .creator-highlight {
+                    color: $white;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

@@ -1,2 +1,88 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 /* Variables */
-/* Font Sizes Variables *//*# sourceMappingURL=style.css.map */
+/* Font Sizes Variables */
+/* Font Type Variable */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Outfit", sans-serif;
+  color: hsl(215, 51%, 70%);
+  font-weight: 200;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+}
+body .container {
+  max-height: 100vh;
+  margin: 4rem 2rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 1rem;
+}
+body .container .image {
+  max-width: 100%;
+  border-radius: 0.7rem;
+}
+body .container .image-title {
+  margin: 1.5rem 0 1rem 0;
+  min-width: 100%;
+  font-size: 22px;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+}
+body .container .image-desc {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+body .container .container__auction {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container .container__auction .auction__price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+body .container .container__auction .auction__price .price-value {
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+}
+body .container .container__auction .auction__time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+body .container .container__auction .auction__time .time-value {
+  font-weight: 400;
+}
+body .container .divider {
+  min-width: 100%;
+  border-top: 1px solid hsl(215, 32%, 27%);
+  margin: 1rem;
+}
+body .container .container__creator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+body .container .container__creator .creator-img {
+  max-width: 12%;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+body .container .container__creator .creator-name {
+  font-weight: 300;
+}
+body .container .container__creator .creator-name .creator-highlight {
+  color: hsl(0, 0%, 100%);
+  font-weight: 300;
+}/*# sourceMappingURL=style.css.map */
