@@ -30,6 +30,9 @@ body .container .image {
   max-width: 100%;
   border-radius: 0.7rem;
 }
+body .container .image-hover {
+  display: none;
+}
 body .container .image-title {
   margin: 1.5rem 0 1rem 0;
   min-width: 100%;
@@ -85,4 +88,54 @@ body .container .container__creator .creator-name {
 body .container .container__creator .creator-name .creator-highlight {
   color: hsl(0, 0%, 100%);
   font-weight: 300;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .container {
+    max-width: 290px;
+  }
+  body .container .container__image {
+    position: relative;
+    cursor: pointer;
+  }
+  body .container .container__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(255, 0, 0, 0);
+    opacity: 0;
+    border-radius: 0.7rem;
+    transition: 0.5s ease;
+  }
+  body .container .container__image:hover::before {
+    background-color: hsl(178, 100%, 50%);
+    opacity: 0.5;
+  }
+  body .container .container__image .image-hover {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body .container .container__image:hover .image-hover {
+    display: block;
+  }
+  body .container .image-title:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+  }
+  body .container .creator-highlight:hover {
+    color: hsl(178, 100%, 50%) !important;
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=style.css.map */

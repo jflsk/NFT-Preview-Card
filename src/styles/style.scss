@@ -48,6 +48,9 @@ body {
             max-width: 100%;
             border-radius: .7rem;
         }
+        .image-hover {
+            display: none;
+        }
         .image-title {
             margin: 1.5rem 0 1rem 0;
             min-width: 100%;
@@ -102,6 +105,56 @@ body {
                     color: $white;
                     font-weight: 300;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 376px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .container {
+            max-width: 290px;
+            .container__image {
+                position: relative;
+                cursor: pointer;
+                &::before { 
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 99%;
+                    background-color: rgba(255, 0, 0, 0);
+                    opacity: 0;
+                    border-radius: .7rem;
+                    transition: .5s ease;
+                }
+                &:hover::before {
+                    background-color: $highlight-font-color;
+                    opacity: 0.5;
+                }
+                .image-hover {
+                    display: none;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &:hover .image-hover {
+                    display: block;
+                }
+            }
+            .image-title:hover {
+                color: $highlight-font-color;
+                cursor: pointer;
+            }
+            .creator-highlight:hover {
+                color: $highlight-font-color !important;
+                cursor: pointer;
             }
         }
     }
